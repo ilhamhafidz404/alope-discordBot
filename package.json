@@ -1,0 +1,14 @@
+{
+  "name": "alope-discord",
+  "version": "1.0.0",
+  "description": "Alope Discord Official",
+  "main": "index.js",
+  "scripts": {
+    "test": "git repository"
+  },
+  "author": "Ilham Hafidz",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
