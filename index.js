@@ -1,7 +1,7 @@
 const { Client, Collection } = require("discord.js");
 const Bot = new Client();
 
-const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.5qRmm8sZy3WdS9CqVNW9gUIiU8E";
+const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.f21a7MgEGieTZCCN6W9YlyVyTKk";
 const PREFIX = "!";
 
 const fs = require("fs");
@@ -39,6 +39,9 @@ Bot.on("message", (message) => {
       break;
     case "author":
       commands.get("author").execute(message, args);
+      break;
+    case "clear":
+      commands.get("clear").execute(message, args);
       break;
   }
 });
