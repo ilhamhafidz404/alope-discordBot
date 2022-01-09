@@ -1,7 +1,7 @@
 const { Client, Collection } = require("discord.js");
 const Bot = new Client();
 
-const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.f21a7MgEGieTZCCN6W9YlyVyTKk";
+const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.VSle9EBVkR_lOm4Rf2TYLY4GLjE";
 const PREFIX = "!";
 
 const fs = require("fs");
