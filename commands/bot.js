@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const info = require("./../info.json");
 
 module.exports = {
   name: "bot",
@@ -18,11 +19,11 @@ module.exports = {
 
       message.reply(botEMbed);
     } else if (args[1] == "author") {
-      message.reply("Ilham Hafidz");
+      message.reply(`${info.author}`);
     } else if (args[1] == "version") {
-      message.reply("Mao v.1.0 BETA");
+      message.reply(`Mao ${info.version}`);
     } else if (args[1] == "name") {
-      message.reply("Mao");
+      message.reply(`${info.name}`);
     } else if (args[1] == "birth") {
       message.reply("Di Develop pada 08 Januari 2022");
     } else if (args[1] == "about") {

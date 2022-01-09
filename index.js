@@ -1,7 +1,7 @@
 const { Client, Collection } = require("discord.js");
 const Bot = new Client();
 
-const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.0LFK4F6IrBJ_L7YGSVBvMcwv5Xs";
+const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.5qRmm8sZy3WdS9CqVNW9gUIiU8E";
 const PREFIX = "!";
 
 const fs = require("fs");
@@ -16,6 +16,12 @@ for (const file of files) {
 
 Bot.on("ready", () => {
   console.log("ready");
+
+  Bot.user
+    .setActivity("ALOPE Community", {
+      type: "LISTENING",
+    })
+    .catch(console.error());
 });
 
 Bot.on("message", (message) => {
