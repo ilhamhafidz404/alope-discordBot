@@ -1,7 +1,7 @@
 const { Client, Collection } = require("discord.js");
 const Bot = new Client();
 
-const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.VSle9EBVkR_lOm4Rf2TYLY4GLjE";
+const token = "OTI5Mzk0NzkyMjIyMzIyNzU5.YdmsWQ.B4T-EJk06pd6SzGkqfNObk2nh30";
 const PREFIX = "!";
 
 const fs = require("fs");
@@ -13,6 +13,19 @@ for (const file of files) {
   const command = require(`./commands/${file}`);
   commands.set(command.name, command);
 }
+
+Bot.on("guildMemberAdd", (member) => {
+  const channel = member.guild.channels.cache.find((ch) => ch.name == "lobby");
+  const rules = member.guild.channels.cache.find((ch) => ch.name == "rules");
+
+  if (!channel) return;
+
+  if (member.guild.name === "ALOPE Community") {
+    channel.send(
+      `Halo ${member}, selamat datang di discord ALOPE Community. Sebelumnya diharapkan untuk baca peraturan dulu disini ${rules} yak`
+    );
+  }
+});
 
 Bot.on("ready", () => {
   console.log("ready");
